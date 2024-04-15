@@ -1,0 +1,26 @@
+{
+    "by": "zaptrem",
+    "descendants": 22,
+    "id": 39992817,
+    "kids": [
+        39994019,
+        39993717,
+        39993620,
+        39993998,
+        39993667,
+        39993643,
+        39993682,
+        39993890,
+        39993648,
+        39993674,
+        39993885,
+        39993850,
+        39993715
+    ],
+    "score": 47,
+    "text": "Hey HN,<p>My cofounder and I trained an AI music generation model and after a month of testing we&#x27;re launching 1.0 today. Ours is interesting because it&#x27;s a latent diffusion model instead of a language model, which makes it more controllable: <a href=\"https:&#x2F;&#x2F;sonauto.ai&#x2F;\">https:&#x2F;&#x2F;sonauto.ai&#x2F;</a><p>Others do music generation by training a Vector Quantized Variational Autoencoder like Descript Audio Codec (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;descriptinc&#x2F;descript-audio-codec\">https:&#x2F;&#x2F;github.com&#x2F;descriptinc&#x2F;descript-audio-codec</a>) to turn music into tokens, then training an LLM on those tokens. Instead, we ripped the tokenization part off and replaced it with a normal variational autoencoder bottleneck (along with some other important changes to enable insane compression ratios). This gave us a nice, normally distributed latent space on which to train a diffusion transformer (like Sora). Our diffusion model is also particularly interesting because it is the first audio diffusion model to generate coherent lyrics!<p>We like diffusion models for music generation because they have some interesting properties that make controlling them easier (so you can make <i>your own</i> music instead of just taking what the machine gives you). For example, we have a rhythm control mode where you can upload your own percussion line or set a BPM. Very soon you&#x27;ll also be able to generate proper variations of an uploaded or previously generated song (e.g., you could even sing into Voice Memos for a minute and upload that!). @Musicians of HN, try uploading your songs and using Rhythm Control&#x2F;let us know what you think! Our goal is to enable more of you, not replace you.<p>For example, we turned this drum line (<a href=\"https:&#x2F;&#x2F;sonauto.ai&#x2F;songs&#x2F;uoTKycBghUBv7wA2YfNz\">https:&#x2F;&#x2F;sonauto.ai&#x2F;songs&#x2F;uoTKycBghUBv7wA2YfNz</a>) into this full song (<a href=\"https:&#x2F;&#x2F;sonauto.ai&#x2F;songs&#x2F;KSK7WM1PJuz1euhq6lS7\">https:&#x2F;&#x2F;sonauto.ai&#x2F;songs&#x2F;KSK7WM1PJuz1euhq6lS7</a> skip to 1:05 if impatient) or this other song I like better (<a href=\"https:&#x2F;&#x2F;sonauto.ai&#x2F;songs&#x2F;qkn3KYv0ICT9kjWTmins\">https:&#x2F;&#x2F;sonauto.ai&#x2F;songs&#x2F;qkn3KYv0ICT9kjWTmins</a> - we accidentally compressed it with AAC instead of Opus which hurt quality, though)<p>We also like diffusion models because while they&#x27;re expensive to train, they&#x27;re cheap to serve. We built our own efficient inference infrastructure instead of using those expensive inference as a service startups that are all the rage. That&#x27;s why we&#x27;re making generations on our site free and unlimited for as long as possible.<p>We&#x27;d love to answer your questions. Let us know what you think of our first model! <a href=\"https:&#x2F;&#x2F;sonauto.ai&#x2F;\">https:&#x2F;&#x2F;sonauto.ai&#x2F;</a>",
+    "time": 1712767681,
+    "title": "Show HN: Sonauto \u2013 a more controllable AI music creator",
+    "type": "story",
+    "url": "https://sonauto.ai/"
+}
